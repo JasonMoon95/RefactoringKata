@@ -16,7 +16,7 @@ class GildedRoseTest {
 
     @Test
     void foo() {
-        Item[] items = new Item[] { new Item("foo", 0, 0) };
+        Item[] items = new Item[] {Item.of("foo", 0, 0)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals("foo", app.items[0].name);
@@ -26,10 +26,10 @@ class GildedRoseTest {
     public void testQuality() {
         //given
         items = new Item[] {
-            new Item("Aged Brie", 10, 30),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-            new Item("Sulfuras, Hand of Ragnaros", 0, 80),
-            new Item("Normal Item", 10, 20)
+                Item.of("Aged Brie", 10, 30),
+                Item.of("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                Item.of("Sulfuras, Hand of Ragnaros", 0, 80),
+                Item.of("Normal Item", 10, 20)
         };
         gildedRose = new GildedRose(items);
 
@@ -47,10 +47,10 @@ class GildedRoseTest {
     public void testSellIn() {
         //given
         items = new Item[] {
-            new Item("Aged Brie", 10, 30),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-            new Item("Sulfuras, Hand of Ragnaros", 0, 80),
-            new Item("Normal Item", 10, 20)
+                Item.of("Aged Brie", 10, 30),
+                Item.of("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                Item.of("Sulfuras, Hand of Ragnaros", 0, 80),
+                Item.of("Normal Item", 10, 20)
         };
         gildedRose = new GildedRose(items);
 
@@ -68,10 +68,10 @@ class GildedRoseTest {
     public void testQualityWithExpiredItem(){
         //given
         items = new Item[] {
-            new Item("Aged Brie", -1, 49),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 0, 49),
-            new Item("Sulfuras, Hand of Ragnaros", -1, 80),
-            new Item("Normal Item", -1, 0)
+                Item.of("Aged Brie", -1, 49),
+                Item.of("Backstage passes to a TAFKAL80ETC concert", 0, 49),
+                Item.of("Sulfuras, Hand of Ragnaros", -1, 80),
+                Item.of("Normal Item", -1, 0)
         };
         gildedRose = new GildedRose(items);
 
@@ -89,10 +89,10 @@ class GildedRoseTest {
     public void testQualityWithMaxQuality(){
         //given
         items = new Item[] {
-            new Item("Aged Brie", 10, 50),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 15, 50),
-            new Item("Sulfuras, Hand of Ragnaros", 10, 80),
-            new Item("Normal Item", 10, 50)
+                Item.of("Aged Brie", 10, 50),
+                Item.of("Backstage passes to a TAFKAL80ETC concert", 15, 50),
+                Item.of("Sulfuras, Hand of Ragnaros", 10, 80),
+                Item.of("Normal Item", 10, 50)
         };
         gildedRose = new GildedRose(items);
 
