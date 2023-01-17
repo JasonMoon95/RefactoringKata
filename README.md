@@ -1,4 +1,4 @@
-# Uplus x AWS Refactoring Kata
+# LG Uplus x AWS Refactoring Kata
 리팩토링을 연습할 수 있는 예제 입니다.
 
 # Gilded Rose 요구사항 명세
