@@ -1,6 +1,5 @@
 package com.gildedrose;
 
-import org.approvaltests.Approvals;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,6 @@ public class GildedRoseApprovalTest {
     private String doUpdateQuality(String name, int sellIn, int quality) {
         GildedRose gildedRose = new GildedRose(new Item[]{Item.of(name, sellIn, quality)});
         gildedRose.updateQuality();
-        String response = Arrays.asList(gildedRose.items).toString();
-        return response;
+        return Arrays.asList(gildedRose.items).toString();
     }
 }
