@@ -41,15 +41,11 @@ public class Item {
     }
 
     void decreaseQuality() {
-        if (quality > 0) {
-            quality--;
-        }
+        quality = Math.max(quality - 1, 0);
     }
 
     void increaseQuality() {
-        if (quality < 50) {
-            quality++;
-        }
+        quality = Math.min(quality + 1, 50);
     }
 
     @Override
