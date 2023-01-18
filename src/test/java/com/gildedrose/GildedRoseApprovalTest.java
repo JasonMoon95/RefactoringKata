@@ -17,7 +17,7 @@ public class GildedRoseApprovalTest {
     }
 
     private String doUpdateQuality(String name, int sellIn, int quality) {
-        GildedRose gildedRose = new GildedRose(new Item[]{Item.of(name, sellIn, quality)});
+        GildedRose gildedRose = new GildedRose(new Item[]{new Item(name, sellIn, quality)});
         gildedRose.updateQuality();
         String response = Arrays.asList(gildedRose.items).toString();
         return response;

@@ -34,11 +34,7 @@
             <groupId>com.approvaltests</groupId>
             <artifactId>approvaltests</artifactId>
             <version>18.5.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pitest</groupId>
-            <artifactId>pitest-junit5-plugin</artifactId>
-            <version>0.15</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
